@@ -139,7 +139,9 @@ def login(user, password):
         "token": "access"
     }
     r1 = requests.post(url1, data=data1, headers=headers, allow_redirects=False)
-    print(r1)
+    print("状态码:", r1.status_code)  # 打印 HTTP 响应状态码
+    print("响应头:", r1.headers)  # 打印响应头
+    print("响应内容:", r1.text)  # 打印响应的文本内容
     location = r1.headers["Location"]
     try:
         code = get_code(location)
